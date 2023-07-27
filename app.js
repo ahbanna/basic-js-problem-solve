@@ -57,7 +57,8 @@ console.log(findFrequentNumber([3, 5, 2, 5, 3, 3, 1, 4, 5]));
 
 // Problem: 4
 // Create a function that takes a sorted array of numbers and a target value as input. The function should find two numbers in the array that add up to the target value. Return an array containing the indices of the two numbers.
-function findTwoNumbersWithSum(arr, target) {
+
+function findTwoSum(arr, target) {
   let left = 0;
   let right = arr.length - 1;
 
@@ -73,13 +74,14 @@ function findTwoNumbersWithSum(arr, target) {
     }
   }
 
-  return null; // Return null if no such pair found
+  return [];
 }
 
-const sortedArray = [1, 3, 6, 8, 11, 15];
+const inputArray = [1, 3, 6, 8, 11, 15];
 const targetValue = 9;
 
-console.log(findTwoNumbersWithSum(sortedArray, targetValue)); // Output: [1, 2] (numbers at indices 1 and 2: 3 + 6 = 9)
+const result = findTwoSum(inputArray, targetValue);
+console.log(result); // [1, 2]
 
 // Problem: 5
 //  Implement a simple JavaScript calculator. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
@@ -164,6 +166,7 @@ console.log(romanToInt("xiv")); // 14
 
 // Problem: 8
 // Implement a JavaScript function to find the second smallest element in an array of numbers. The function should return the second smallest number.
+
 function findSecondSmallest(arr) {
   if (arr.length < 2) {
     return "Array must contain at least two elements.";
